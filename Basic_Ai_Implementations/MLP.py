@@ -5,7 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 
-np.random.seed(100)
+np.random.seed(42)
 
 class Layer:
     """
