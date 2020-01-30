@@ -12,15 +12,15 @@ import pandas as pd
 import numpy.matlib
 from sklearn.pipeline import Pipeline
 start_time = time.time()
-# loading thr dataset
+# loading the dataset
 data = pd.read_csv('mushroom_csv.csv')
 le = LabelEncoder()
 # encoding the class column
 data['class'] = le.fit_transform(data['class'])
-# removing class from feature vector
+# removing class column from feature vector
 Y = data['class'].values.reshape(-1, 1)
 data = data.drop('class', 1)
-#print(data.head(5))
+# print(data.head(5))
 # encoding string features into binary ones
 encoded_data = pd.get_dummies(data)
 #print(encoded_data.head(5))
