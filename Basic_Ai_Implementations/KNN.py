@@ -20,7 +20,8 @@ data['class'] = le.fit_transform(data['class'])
 # removing class column from feature vector
 Y = data['class'].values.reshape(-1, 1)
 data = data.drop('class', 1)
-# print(data.head(5))
+# get an idea of the dataset
+print(data.head(5))
 # encoding string features into binary ones
 encoded_data = pd.get_dummies(data)
 #print(encoded_data.head(5))
